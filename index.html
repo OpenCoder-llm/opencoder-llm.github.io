@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Sailor: Open Language Models for South-East Asia">
+  <meta property="og:image" content="./static/images/banner.jpg" />
+  <meta name="keywords" content="Language Models, South-East Asia">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sailor: Open Language Models for South-East Asia</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6TYFY7SV7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title"><img src="./static/images/sailor_logo.png" width="60px"> Introducing Sailor: <br/>Open Language Models for South-East Asia</h1>
+          <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+            <span class="author-block">
+              <div style="display: flex; align-items: center;">
+                <span style="vertical-align: middle;"><a href="https://sail.sea.com/"><img src="./static/images/sail_logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a> and <a href="https://istd.sutd.edu.sg/people/faculty/lu-wei/"><img src="./static/images/sutd_logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a></span>
+            </div>
+          </span>
+          </div>
+
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Washington,</span>
+            <span class="author-block"><sup>2</sup>Google Research</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2404.03608.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                   <span>Paper</span>
+                   </a>
+              </span>
+              <!-- Model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/sail/sailor-65e19a749f978976f1959825"
+                   class="external-link button is-normal is-rounded is-dark">
+                   <span class="icon"> <img src="./static/images/huggingface_logo.svg" width="20px"> </span>
+                   <span>Model</span>
+                   </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sail-sg/sailor-llm"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Model Code</span>
+                  </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/sail-sg/sailcraft"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-book"></i>
+                  </span>
+                  <span>Data Code</span>
+                  </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/sail/Sailor-14B-Chat"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-comments"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9RAfPb1i53ZxgMVedfGbBLB7_3JCaM72LgKX14AQ09gVMdQ/viewform"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-paper-plane"></i>
+                  </span>
+                  <span>Join Sailor2</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section teaser">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">📢 Join the Sailor2 Project</h2>
+        <div class="content has-text-justified">
+          <p>
+            🌐 The Sailor2 project aims to build a LLM with ~30B parameters, optimized for multiple South-East Asian languages, including Cebuano, Indonesian, Khmer, Lao, Minangkabau, Malay, Burmese, Sundanese, Javanese, Thai, and Vietnamese.
+          </p>
+          <p>
+            🎯 The model will undergo continual pre-training from a base model proficient in both Chinese and English using nearly 800B SEA tokens, with an expected performance comparable to the most advanced business models for the above SEA languages.
+          </p>
+          <p>
+            🤝 Contribute your data, expertise, and ideas to shape the future of open-source LLMs for the SEA region.
+          </p>
+          <p>
+            🌍 Everyone passionate about the SEA region is welcome aboard! Join the party and get involved by cliking the Join Button! 🔍
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <section class="section teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Demonstration: How to Cook a Fish</h2>
+        <div class="content has-text-justified">
+          <img src="./static/images/en_demo.gif" width="40%">
+          <img src="./static/images/id_demo.gif" width="40%">
+        </div>
+        <div class="content has-text-justified">
+          <img src="./static/images/th_demo.gif" width="40%">
+          <img src="./static/images/vi_demo.gif" width="40%">
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="section teaser">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Overview of Sailor</h2>
+        <div class="content has-text-justified">
+          <p>
+            Sailor is a suite of Open Language Models tailored for South-East Asia (SEA), focusing on languages such as 🇮🇩Indonesian, 🇹🇭Thai, 🇻🇳Vietnamese, 🇲🇾Malay, and 🇱🇦Lao. Developed with careful data curation, Sailor models are designed to understand and generate text across diverse linguistic landscapes of SEA region. Built from Qwen 1.5, Sailor encompasses models of varying sizes, spanning from 0.5B to 14B versions for different requirements. Benchmarking results demonstrate Sailor's proficiency in tasks such as question answering, commonsense reasoning, reading comprehension and etc. in SEA languages.
+            <!-- We further fine-tune the base model with open-source datasets to get instruction-tuned models, namedly Sailor-Chat. -->
+          </p>
+          <ul>
+            <li>
+              Continually pretrained on <b>200 Billion to 400 Billion</b> tokens over 7 languages, including Indonesian, Thai, Vietnamese, Malay, Lao, English and Chinese.
+            </li>
+            <li>
+              Various model sizes (<b>0.5B</b>, <b>1.8B</b>, <b>4B</b>, <b>7B</b>, <b>14B</b>) to support different requirements.
+            </li>
+            <li>
+              Strong performance on SEA benchmarks such as XQuAD, TydiQA, XCOPA, Belebele and M3Exam.
+            </li>
+            <li>
+              No restrict on the research and the commercial use, but should comply with the Qwen 1.5 license.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <!-- Description -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Sailor is Built from Open-Source Community</h2>
+        <div class="content has-text-justified">
+          <p>
+            Sailor owes its existence to the open-source community. It is crafted by continually pre-training from language models like the remarkable <a href="https://qwenlm.github.io/blog/qwen1.5/">Qwen 1.5</a> models, which already has a great performance on SEA languages. The pre-training corpus heavily leverages the publicly available corpus, including <a href="https://huggingface.co/datasets/cerebras/SlimPajama-627B">SlimPajama</a>, <a href="https://huggingface.co/datasets/Skywork/SkyPile-150B">SkyPile</a>, <a href="https://huggingface.co/datasets/cc100">CC100</a> and <a href="https://huggingface.co/datasets/allenai/MADLAD-400">MADLAD-400</a>.
+          </p>
+          <p>
+            By employing aggressive data deduplication and careful data cleaning on the collected corpus, we have attained a high-quality dataset spanning various languages. Through systematic experiments to determine the weights of different languages, Sailor models undergo training from 200B to 400B tokens, tailored to different model sizes. The approach boosts their performance on SEA languages while maintaining proficiency in English and Chinese without significant compromise. Finally, we continually pre-train the Qwen1.5-0.5B model with 400 Billion tokens, and other models with 200 Billion tokens to obtain the Sailor models.
+          </p>
+          <p>For most of the models, we use 200 billion tokens, with the effective tokens for each language as shown below. For models utilizing 400 billion tokens, they are doubled accordingly.</p>
+          <br/>
+
+          <table>
+            <tr>
+              <th>Language</th>
+              <th>Tokens (Billion)</th>
+            </tr>
+            <tr>
+              <td>Indonesian (id)</td>
+              <td>51.56</td>
+            </tr>
+            <tr>
+              <td>Malay (ms)</td>
+              <td>7.91</td>
+            </tr>
+            <tr>
+              <td>Thai (th)</td>
+              <td>38.24</td>
+            </tr>
+            <tr>
+              <td>Vietnamese (vi)</td>
+              <td>41.50</td>
+            </tr>
+            <tr>
+              <td>Lao (lo)</td>
+              <td>0.34</td>
+            </tr>
+            <tr>
+              <td>English (en)</td>
+              <td>37.2</td>
+            </tr>
+            <tr>
+              <td>Chinese (zh)</td>
+              <td>22.64</td>
+            </tr>
+          </table>          
+        </div>
+        <br/>
+
+      </div>
+      <!-- Description -->
+    </div>
+
+    <div class="columns is-centered">
+      <!-- Pretrain. -->
+      <div class="column is-full-width">
+        
+        <h2 class="title is-3">Sailor is Committed to Open-Source Community</h2>
+        <div class="content has-text-justified">
+          <p>
+          The release of Sailor models marks the beginning of our commitment to open-source. Over the coming weeks, we plan to release several training recipes, including the code for pre-training, the pipeline for data cleaning and data deduplication. Additionally, we aim to share our pre-training corpus as soon as possible. We encourage you to stay tuned for updates.
+          </p>
+        </div>
+        <!-- Datasets. -->
+        <br/>
+
+      </div>
+      <!-- Pretrain. -->
+    </div>
+    <div class="columns is-centered">
+      <!-- Performance-->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Benchmarking Performance</h2>
+        <!-- Benchmark. -->
+        <!-- <h3 class="title is-4">Benchmark</h3> -->
+        <div class="content has-text-justified">
+          <p>
+            Sailor models are evaluated spanned several high-quality benchmarks, encompassing four kinds of different tasks: question answering, common sense reasoning, reading Comprehension and examination. We gratefully acknowledge the contributions of all dataset authors. As for evaluation, following established evaluation protocols, we employed the awesome evaluation platform <a href="https://github.com/open-compass/opencompass">OpenCompass</a> for comprehensive evaluation. The performance of all models are assessed based on the 3-shot Exact Match performance, with prompt provided in local languages (e.g., Indonesian task description for Indonesian tasks).
+          </p>
+          <p>
+            We acknowledge and respect the release of several SEA language models before, including <a href="https://aisingapore.org/aiproducts/sea-lion/">SEA-LION</a>, <a href="https://arxiv.org/abs/2312.00738">SeaLLMs</a>, <a href="https://arxiv.org/abs/2312.13951">Typhoon</a> and <a href="https://arxiv.org/abs/2312.11011">VinaLLaMA</a>. Here we mainly selected <a href="https://huggingface.co/SeaLLMs/SeaLLM-7B-Hybrid">SeaLLMs-7B-Hybrid</a>, its base model <a href="https://huggingface.co/meta-llama/Llama-2-7B">Llama-2-7B</a>, <a href="https://huggingface.co/SeaLLMs/SeaLLM-7B-v2">SeaLLMs-7B-v2</a> and its base model <a href="https://huggingface.co/mistralai/Mistral-7B-v0.1">Mistral-7B-v0.1</a> for performance comparsion, and evaluation results of more models will be presented in our paper. Our reporting strictly adheres to the same evaluation methodology to ensure fair comparsion, and we make much efforts to closely match the reported results of the baseline.
+          </p>
+          <ul>
+            <li>
+              <b>Question Answering</b>: <a href="https://arxiv.org/abs/1910.11856">XQuAD</a> (Thai, Vietnamese) and <a href="https://arxiv.org/abs/2003.05002">TydiQA</a> (Indonesian).
+            </li>
+            <li>
+              <b>Commonsense Reasoning</b>: <a href="https://aclanthology.org/2020.emnlp-main.185/">XCOPA</a> (Indonesian, Thai, Vietnamese).
+            </li>
+            <li>
+              <b>Reading Comprehension</b>: <a href="https://arxiv.org/abs/2308.16884">Belebele</a> (Indonesian, Thai, Vietnamese).
+            </li>
+            <li>
+              <b>Examination</b>: <a href="https://arxiv.org/abs/2306.05179">M3Exam</a> (Javanese, Thai, Vietnamese).
+            </li>
+          </ul>
+        </div>
+        <!-- Benchmark. -->
+        <br/>
+
+        <div class="column is-full-width">
+          <h2 class="title is-4">Question Answering</h2>
+
+          <p>
+            All models are evaluated on the XQuAD and TydiQA benchmarks, with the 3-shot Exact Match (EM) and F1 score reported. Baselines which have better performance than Sailor models are highlighted in <span class="baseline">green</span>. Sailor-14B's XQuAD (th) result seem abnormal, with its predictions tending to be semantically equivalent but longer than the groundtruth, leading to lower EM and F1 scores compared to Qwen1.5.
+          <br/>
+          <table>
+            <tr>
+                <th>3-shot (EM / F1)</th>
+                <th>XQuAD (th)</th>
+                <th>TydiQA (id)</th>
+                <th>XQuAD (vi)</th>
+            </tr>
+            <tr>
+              <td>Qwen1.5-0.5B</td>
+              <td>14.19 / 23.35</td>
+              <td>20.71 / 32.64</td>
+              <td>19.85 / 35.38</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-0.5B</td>
+              <td>15.84 / 27.58</td>
+              <td>30.44 / 54.74</td>
+              <td>21.13 / 40.57</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-1.8B</td>
+              <td>27.24 / 43.56</td>
+              <td>29.73 / 53.76</td>
+              <td>29.17 / 48.15</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-1.8B</td>
+              <td>32.72 / 48.66</td>
+              <td>40.88 / 65.37</td>
+              <td>34.22 / 53.35</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-4B</td>
+              <td>34.03 / 53.40</td>
+              <td>48.32 / 72.68</td>
+              <td>43.71 / 63.86</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-4B</td>
+              <td>46.82 / 63.34</td>
+              <td>53.98 / 73.48</td>
+              <td>47.65 / 67.09</td>
+            </tr>
+            <tr>
+              <td>Llama-2-7B</td>
+              <td>30.64 / 43.80</td>
+              <td>56.64 / 72.14</td>
+              <td>46.96 / 66.16</td>
+            </tr>
+            <tr>
+              <td>Mistral-7B-v0.1</td>
+              <td>48.48 / 63.27</td>
+              <td class="baseline">63.54 / 78.73</td>
+              <td>53.72 / 72.75</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-Hybrid</td>
+              <td>49.70 / 67.62</td>
+              <td>50.62 / 75.21</td>
+              <td>49.62 / 70.74</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-v2</td>
+              <td>34.55 / 55.13</td>
+              <td>52.21 / 77.00</td>
+              <td>46.19 / 72.11</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-7B</td>
+              <td>53.79 / 69.30</td>
+              <td>57.17 / 77.28</td>
+              <td class="baseline">56.63 / 76.99</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-7B</td>
+              <td>57.88 / 71.06</td>
+              <td>60.53 / 75.42</td>
+              <td>53.81 / 74.62</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-14B</td>
+              <td class="baseline">55.53 / 74.36</td>
+              <td class="baseline">60.18 / 81.05</td>
+              <td>57.57 / 77.58</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-14B</td>
+              <td>49.43* / 69.99*</td>
+              <td>58.94 / 77.85</td>
+              <td>57.83 / 77.37</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="column is-full-width">
+          <h2 class="title is-4">Commonsense Reasoning</h2>
+          
+          <p>
+            All models are evaluated on the XCOPA benchmark, with the 3-shot accuracy reported.
+          </p>
+          <br/>
+
+          <table>
+            <tr>
+              <th>3-shot (EM)</th>
+              <th>XCOPA (th)</th>
+              <th>XCOPA (id)</th>
+              <th>XCOPA (vi)</th>
+            </tr>
+            <tr style="color: grey">
+              <td>Random Guess</td>
+              <td><span style="color: grey">50.00</span></td>
+              <td><span style="color: grey">50.00</span></td>
+              <td><span style="color: grey">50.00</span></td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-0.5B</td>
+              <td>51.00</td>
+              <td>52.20</td>
+              <td>53.80</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-0.5B</td>
+              <td>51.00</td>
+              <td>58.20</td>
+              <td>58.00</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-1.8B</td>
+              <td>52.60</td>
+              <td>51.60</td>
+              <td>53.40</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-1.8B</td>
+              <td>53.80</td>
+              <td>64.20</td>
+              <td>63.20</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-4B</td>
+              <td>53.40</td>
+              <td>55.00</td>
+              <td>57.80</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-4B</td>
+              <td>53.40</td>
+              <td>69.20</td>
+              <td>68.20</td>
+            </tr>
+            <tr>
+              <td>Llama-2-7B</td>
+              <td>52.80</td>
+              <td>64.00</td>
+              <td>62.00</td>
+            </tr>
+            <tr>
+              <td>Mistral-7B-v0.1</td>
+              <td>57.20</td>
+              <td>62.40</td>
+              <td>61.60</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-Hybrid</td>
+              <td>58.20</td>
+              <td>71.60</td>
+              <td>67.60</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-v2</td>
+              <td>56.80</td>
+              <td>64.00</td>
+              <td>64.60</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-7B</td>
+              <td>54.20</td>
+              <td>62.20</td>
+              <td>66.20</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-7B</td>
+              <td>59.00</td>
+              <td>72.20</td>
+              <td>72.20</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-14B</td>
+              <td>60.00</td>
+              <td>72.20</td>
+              <td>74.00</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-14B</td>
+              <td>64.40</td>
+              <td>79.60</td>
+              <td>80.40</td>
+            </tr>
+          </table>
+          
+        </div>
+
+
+
+
+        <div class="column is-full-width">
+          <h2 class="title is-4">Reading Comprehension</h2>
+
+          <p>All models are evaluated on the Belebele benchmark, with the 3-shot Exact Match (EM) reported. Baselines which have better performance than Sailor models are highlighted in <span class="baseline">green</span>.
+          </p>
+          <br/>
+          <table>
+            <tr>
+              <th>3-shot (EM)</th>
+              <th>Belebele (th)</th>
+              <th>Belebele (id)</th>
+              <th>Belebele (vi)</th>
+            </tr>
+            <tr style="color: grey">
+              <td>Random Guess</td>
+              <td><span style="color: grey">25.00</span></td>
+              <td><span style="color: grey">25.00</span></td>
+              <td><span style="color: grey">25.00</span></td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-0.5B</td>
+              <td>29.89</td>
+              <td>26.89</td>
+              <td>30.22</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-0.5B</td>
+              <td>32.22</td>
+              <td>30.89</td>
+              <td>32.33</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-1.8B</td>
+              <td>30.11</td>
+              <td>32.00</td>
+              <td>31.33</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-1.8B</td>
+              <td>34.22</td>
+              <td>34.89</td>
+              <td>35.33</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-4B</td>
+              <td>32.78</td>
+              <td>36.22</td>
+              <td>35.22</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-4B</td>
+              <td>36.11</td>
+              <td>41.33</td>
+              <td>38.89</td>
+            </tr>
+            <tr>
+              <td>Llama-2-7B</td>
+              <td>31.78</td>
+              <td>39.78</td>
+              <td>38.00</td>
+            </tr>
+            <tr>
+              <td>Mistral-7B-v0.1</td>
+              <td>34.33</td>
+              <td>41.33</td>
+              <td>41.33</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-Hybrid</td>
+              <td>37.78</td>
+              <td>43.11</td>
+              <td>43.00</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-v2</td>
+              <td>36.33</td>
+              <td>43.11</td>
+              <td class="baseline">47.00</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-7B</td>
+              <td>38.33</td>
+              <td>42.00</td>
+              <td>42.89</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-7B</td>
+              <td>41.56</td>
+              <td>44.33</td>
+              <td>45.33</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-14B</td>
+              <td>41.44</td>
+              <td>46.22</td>
+              <td>40.33</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-14B</td>
+              <td>42.11</td>
+              <td>47.56</td>
+              <td>45.89</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <div class="column is-full-width">
+          <h2 class="title is-4">Examination</h2>
+
+          <p>All models are evaluated on the M3Exam benchmark, with the 3-shot Exact Match (EM) reported. 
+            The code jv is short for Javanese, which is a language spoken in Indonesia.
+          </p>
+          
+          <br/>
+          <table>
+            <tr>
+              <th>3-shot (EM)</th>
+              <th>M3Exam (th)</th>
+              <th>M3Exam (jv)</th>
+              <th>M3Exam (vi)</th>
+            </tr>
+            <tr>
+              <td>Qwen1.5-0.5B</td>
+              <td class="baseline">22.38</td>
+              <td>22.10</td>
+              <td class="baseline">29.12</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-0.5B</td>
+              <td>21.87</td>
+              <td>28.84</td>
+              <td>23.53</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-1.8B</td>
+              <td>23.81</td>
+              <td>26.15</td>
+              <td class="baseline">36.39</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-1.8B</td>
+              <td>23.90</td>
+              <td>29.65</td>
+              <td>27.67</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-4B</td>
+              <td>26.26</td>
+              <td class="baseline">30.19</td>
+              <td class="baseline">40.02</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-4B</td>
+              <td>27.23</td>
+              <td>29.11</td>
+              <td>31.58</td>
+            </tr>
+            <tr>
+              <td>Llama-2-7B</td>
+              <td>21.13</td>
+              <td>23.99</td>
+              <td>34.14</td>
+            </tr>
+            <tr>
+              <td>Mistral-7B-v0.1</td>
+              <td>29.59</td>
+              <td>31.00</td>
+              <td>43.54</td>
+            </tr>
+            <tr>
+              <td>Sea-Lion-7B</td>
+              <td>23.90</td>
+              <td>21.56</td>
+              <td>26.89</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-Hybrid</td>
+              <td>25.98</td>
+              <td>24.53</td>
+              <td>38.79</td>
+            </tr>
+            <tr>
+              <td>SeaLLM-7B-v2</td>
+              <td>35.60</td>
+              <td>29.92</td>
+              <td>50.36</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-7B</td>
+              <td>35.88</td>
+              <td>33.15</td>
+              <td>51.09</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-7B</td>
+              <td>38.33</td>
+              <td>35.85</td>
+              <td>51.98</td>
+            </tr>
+            <tr>
+              <td>Qwen1.5-14B</td>
+              <td>43.18</td>
+              <td>35.04</td>
+              <td>58.47</td>
+            </tr>
+            <tr class="highlight">
+              <td>Sailor-14B</td>
+              <td>48.22</td>
+              <td>39.89</td>
+              <td>60.54</td>
+            </tr>
+          </table>
+
+        </div>
+
+      </div>
+      <!-- Performance-->
+    </div>
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Contributors</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>Longxu Dou, Sea AI Lab</li>
+            <li>Qian Liu, Sea AI Lab</li>
+            <li>Guangtao Zeng, SUTD</li>
+            <li>Jia Guo, NUS</li>
+            <li>Jiahui Zhou, Sea AI Lab</li>
+            <li>Ziqi Jin, SUTD</li>
+            <li>Xin Mao, NTU</li>
+            <li>Wei Lu, SUTD</li>
+            <li>Min Lin, Sea AI Lab</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Contact Us</h2>
+        <div class="content has-text-justified">
+          <p>
+            Sailor models are free for research and commercial use, but you should also obey the <a href="https://huggingface.co/Qwen/Qwen1.5-0.5B/blob/main/LICENSE">Qwen 1.5 license</a>. We encourage you to use Sailor models in your research and applications, and we are looking forward to seeing the amazing things you will build with Sailor models. If you have any questions or want to reach out to us, please raise an issue in our Github or contact us at <a href="mailto:doulx@sea.com">doulx@sea.com</a> and <a href="mailto:liuqian@sea.com">liuqian@sea.com</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- add te banner image in the center -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <p>
+            <img src="./static/images/banner.jpg" width="100%" style="padding-left: 10%;padding-right:10%;">
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code></code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a> -->
+      <a class="icon-link" href="https://github.com/sail-sg" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <div class="content has-text-centered">
+            <p>
+              The website is based on the awesome <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a> project, licensed under 
+              a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
