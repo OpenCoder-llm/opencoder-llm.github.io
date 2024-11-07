@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://use.typekit.net/your-adobe-font-id.css">
   <meta charset="utf-8">
   <meta name="description"
         content="OpenCoder: The Open Cookbook For Top-Tier Code Large Language Models">
@@ -44,18 +45,108 @@
 
 
 <section class="hero teaser">
-  <!-- <div class="hero-body">
+  <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title"><img src="./static/images/opencoder_logo.jpg" width="60px"> OpenCoder: <br/>Top-Tier Open Code Large Language Models</h1>
-          <div class="is-size-5 publication-authors" style="margin-bottom: 1rem;">
+          <div style="text-align: center; width: 100%;">
+            <h1 class="title publication-title" style="font-size: 2.5rem; display: inline-flex; align-items: center; white-space: nowrap; font-family: 'Times New Roman', Times, serif;">
+              <img src="./static/images/opencoder_logo.jpg" width="70px" style="margin-right: 15px;">
+              <span style="color: rgb(0, 176, 81);">OpenCoder:</span> The Cookbook for Top-Tier Open Code Large Language Models
+            </h1>
+            
+          </div>
+          <div class="is-size-5 publication-authors" style="margin-top: 1rem; margin-bottom: 2rem;">
             <span class="author-block">
               <div style="display: flex; align-items: center;">
-                <span style="vertical-align: middle;"><a href="https://www.infly.cn/"><img src="./static/images/inf_logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a> and <a href="https://huggingface.co/m-a-p"><img src="./static/images/map_logo.png" style="height: 2.5rem; margin-right: 5px; vertical-align: middle;"></a></span>
-            </div>
-          </span>
-          </div> -->
+                <a href="https://www.infly.cn/">
+                  <img src="./static/images/inf_logo.png" style="height: 2.5rem; margin-right: 15px; vertical-align: middle;">
+                </a>
+                <span style="margin: 0 10px;">and</span>
+                <a href="https://huggingface.co/m-a-p">
+                  <img src="./static/images/map_logo.png" style="height: 2.5rem; margin-left: 15px; vertical-align: middle;">
+                </a>
+              </div>
+            </span>
+            <br>
+            <br>
+            <!-- <p style="font-family: 'MinionPro-Capt', Times, serif; font-size: 1.2rem;">
+              OpenCoder is an open and reproducible code LLM family which matches the performance of QwenCoder-2.5.
+              We provide not just the final models, but also the <span style="color: rgb(0, 176, 81); font-weight: bold;">reproducible</span> training data,
+              the <span style="color: rgb(0, 176, 81); font-weight: bold;">complete</span> data processing pipeline,
+              <span style="color: rgb(0, 176, 81); font-weight: bold;">rigorous</span> experimental ablation results, and
+              <span style="color: rgb(0, 176, 81); font-weight: bold;">detailed</span> training protocols for open scientific research.
+            </p> -->
+          </div>
+
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <a href="https://arxiv.org/pdf/2404.03608.pdf"
+                 class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                 <span>Paper</span>
+                 </a>
+            </span>
+            <!-- Model Link. -->
+            <span class="link-block">
+              <a href="https://huggingface.co/collections/sail/sailor-65e19a749f978976f1959825"
+                 class="external-link button is-normal is-rounded is-dark">
+                 <span class="icon"> <img src="./static/images/huggingface_logo.svg" width="20px"> </span>
+                 <span>Model</span>
+                 </a>
+            </span>
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://github.com/sail-sg/sailor-llm"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Model Code</span>
+                </a>
+            </span>
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://github.com/sail-sg/sailcraft"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-book"></i>
+                </span>
+                <span>Data Code</span>
+                </a>
+            </span>
+            <!-- Demo Link. -->
+            <span class="link-block">
+              <a href="https://huggingface.co/spaces/sail/Sailor-14B-Chat"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-comments"></i>
+                </span>
+                <span>Demo</span>
+                </a>
+            </span>
+            <span class="link-block">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9RAfPb1i53ZxgMVedfGbBLB7_3JCaM72LgKX14AQ09gVMdQ/viewform"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fa fa-paper-plane"></i>
+                </span>
+                <span>Join Sailor2</span>
+                </a>
+            </span>
+            <!-- Dataset Link. -->
+            <!-- <span class="link-block">
+              <a href=""
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="far fa-images"></i>
+                </span>
+                <span>Data</span>
+                </a>
+            </div> -->
 
           <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>University of Washington,</span>
@@ -69,88 +160,11 @@
         <div class="column is-full-width">
           <div class="content has-text-justified">
             <p>
-              <img src="./static/images/banner.jpg" width="100%" style="padding-left: 10%;padding-right:10%;">
+              <img src="./static/images/opencoder_banner.png" width="100%" style="padding-left: 10%;padding-right:10%;">
             </p>
           </div>
         </div>
       </div>
-
-
-      <div class="column has-text-centered">
-        <div class="publication-links">
-          <!-- PDF Link. -->
-          <span class="link-block">
-            <a href="https://arxiv.org/pdf/2404.03608.pdf"
-               class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                </span>
-               <span>Paper</span>
-               </a>
-          </span>
-          <!-- Model Link. -->
-          <span class="link-block">
-            <a href="https://huggingface.co/collections/sail/sailor-65e19a749f978976f1959825"
-               class="external-link button is-normal is-rounded is-dark">
-               <span class="icon"> <img src="./static/images/huggingface_logo.svg" width="20px"> </span>
-               <span>Model</span>
-               </a>
-          </span>
-          <!-- Code Link. -->
-          <span class="link-block">
-            <a href="https://github.com/sail-sg/sailor-llm"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fab fa-github"></i>
-              </span>
-              <span>Model Code</span>
-              </a>
-          </span>
-          <!-- Code Link. -->
-          <span class="link-block">
-            <a href="https://github.com/sail-sg/sailcraft"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fas fa-book"></i>
-              </span>
-              <span>Data Code</span>
-              </a>
-          </span>
-          <!-- Demo Link. -->
-          <span class="link-block">
-            <a href="https://huggingface.co/spaces/sail/Sailor-14B-Chat"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="far fa-comments"></i>
-              </span>
-              <span>Demo</span>
-              </a>
-          </span>
-          <span class="link-block">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9RAfPb1i53ZxgMVedfGbBLB7_3JCaM72LgKX14AQ09gVMdQ/viewform"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="fa fa-paper-plane"></i>
-              </span>
-              <span>Join Sailor2</span>
-              </a>
-          </span>
-          <!-- Dataset Link. -->
-          <!-- <span class="link-block">
-            <a href=""
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                  <i class="far fa-images"></i>
-              </span>
-              <span>Data</span>
-              </a>
-          </div> -->
-
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 
 </section>
 
