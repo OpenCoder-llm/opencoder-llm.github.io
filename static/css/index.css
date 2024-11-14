@@ -182,6 +182,18 @@ th {
   font-weight: 1000;
 }
 
+
+.citation-box {
+  border-left: 10px solid #333;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  white-space: pre; /* 确保保留换行和空格，但不多余缩进 */
+  text-align: left !important; /* 框内文本靠左 */
+  background-color: #f9f9f9;
+  font-style: italic;
+}
+
+
 /* tr:nth-child(even) {
   background-color: #f4f8ff;
 } */
